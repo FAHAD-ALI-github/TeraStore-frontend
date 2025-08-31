@@ -12,10 +12,10 @@ const Cart = ({location, getLocation}) => {
   const { cartItem , updateQuantity, deleteItem} = useCart()
   const {user} = useUser()
   const navigate = useNavigate()
-  
 
-  const totalPrice = cartItem.reduce((total, item) => total + item.price, 0)
-  return (
+  const totalPrice = cartItem.reduce((total, item) => total + (item.price * item.quantity), 0)
+
+return (
     <div className='mt-10 max-w-6xl mx-auto mb-5 px-4 md:px-0'>
       {
         cartItem.length > 0 ? <div>
@@ -107,7 +107,12 @@ const Cart = ({location, getLocation}) => {
                     <button className='bg-white text-black border border-gray-200 px-4 cursor-pointer py-1 rounded-md'>Apply</button>
                   </div>
                 </div>
-                <button className='bg-red-500 text-white px-3 py-2 rounded-md w-full cursor-pointer mt-3'>Proceed to Checkout</button>
+                <button 
+                  onClick={() => navigate('/checkout')} 
+                  className='bg-red-500 text-white px-3 py-2 rounded-md w-full cursor-pointer mt-3 hover:bg-red-600 transition-colors transform hover:scale-105'
+                >
+                  Proceed to Checkout
+                </button>
               </div>
             </div>
           </div>

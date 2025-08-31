@@ -5,6 +5,8 @@ import Products from './pages/Products'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
+import Orders from './pages/Orders'
 import Navbar from './components/Navbar'
 import axios from 'axios'
 import Footer from './components/Footer'
@@ -69,6 +71,12 @@ const App = () => {
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/cart' element={<ProtectedRoute>
           <Cart location={location} getLocation={getLocation} />
+        </ProtectedRoute>}></Route>
+        <Route path='/checkout' element={<ProtectedRoute>
+          <Checkout location={location} getLocation={getLocation} />
+        </ProtectedRoute>}></Route>
+        <Route path='/orders' element={<ProtectedRoute>
+          <Orders />
         </ProtectedRoute>}></Route>
       </Routes>
       <Footer />

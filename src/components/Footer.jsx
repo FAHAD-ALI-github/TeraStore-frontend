@@ -14,9 +14,9 @@ const Footer = () => {
               <h1 className='text-red-500 text-2xl font-bold'>Tera store</h1>
             </Link>
             <p className='mt-2 text-sm'>Powering Your World with the Best in Electronics.</p>
-            <p className='mt-2 text-sm'>123 Electronics St, Style City, NY 10001</p>
+            <p className='mt-2 text-sm'>123 tech-St, Lahore, Pakistan</p>
             <p className='text-sm'>Email: support@terastore.com</p>
-            <p className='text-sm'>Phone: (123) 456-7890</p>
+            <p className='text-sm'>Phone: +92 327 0688791</p>
         </div>
         {/* customer service link */}
         <div className='mb-6 md:mb-0'>
