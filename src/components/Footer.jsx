@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-// import Logo from '../assets/Logo.png'
-import { FaFacebook, FaInstagram, FaPinterest, FaTwitterSquare } from 'react-icons/fa'
+import { Link } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -18,27 +17,37 @@ const Footer = () => {
             <p className='text-sm'>Email: support@terastore.com</p>
             <p className='text-sm'>Phone: +92 327 0688791</p>
         </div>
-        {/* customer service link */}
-        <div className='mb-6 md:mb-0'>
-            <h3 className='text-xl font-semibold'>Customer Service</h3>
-            <ul className='mt-2 text-sm space-y-2'>
-                <li>Contact Us</li>
-                <li>Shipping & Returns</li>
-                <li>FAQs</li>
-                <li>Order Tracking</li>
-                <li>Size Guide</li>
-            </ul>
-        </div>
-        {/* social media links */}
-        <div className='mb-6 md:mb-0'>
-            <h3 className='text-xl font-semibold'>Follow Us</h3>
-            <div className='flex space-x-4 mt-2'>
-                <FaFacebook/>
-                <FaInstagram/>
-                <FaTwitterSquare/>
-                <FaPinterest/>
-            </div>
-        </div>
+
+{/* customer service link */}
+<div className='mb-6 md:mb-0'>
+  <h3 className='text-xl font-semibold'>Customer Service</h3>
+  <ul className='mt-2 text-sm space-y-2'>
+    <li><Link to="/contact" className="hover:text-red-500">Contact Us</Link></li>
+    <li><Link to="/contact" className="hover:text-red-500">Shipping & Returns</Link></li>
+    <li><Link to="/contact" className="hover:text-red-500">FAQs</Link></li>
+    <li><Link to="/contact" className="hover:text-red-500">Order Tracking</Link></li>
+    <li><Link to="/contact" className="hover:text-red-500">Size Guide</Link></li>
+  </ul>
+</div>
+
+{/* social media links */}
+<div className='mb-6 md:mb-0'>
+  <h3 className='text-xl font-semibold'>Follow Us</h3>
+  <div className='flex space-x-4 mt-2 text-2xl'>
+    <a href="https://www.linkedin.com/in/fahadali1078/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+      <FaLinkedin />
+    </a>
+    <a href="https://github.com/FAHAD-ALI-github" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+      <FaGithub />
+    </a>
+    <a href="https://www.instagram.com/fahad_ali1078/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+      <FaInstagram />
+    </a>
+    <a href="https://x.com/FahadAli_0x" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+      <FaTwitter />
+    </a>
+  </div>
+</div>
         {/* newsletter subscription */}
         <div>
             <h3 className='text-xl font-semibold'>Stay in the Loop</h3>

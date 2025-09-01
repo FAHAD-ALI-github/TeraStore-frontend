@@ -2,6 +2,7 @@ import { UserButton, useUser } from '@clerk/clerk-react'
 import React from 'react'
 import { FaUserCircle } from 'react-icons/fa'
 import { Link, NavLink } from 'react-router-dom'
+import { Package } from 'lucide-react'
 
 const ResponsiveMenu = ({ openNav, setOpenNav }) => {
     const { user } = useUser()
@@ -23,6 +24,12 @@ const ResponsiveMenu = ({ openNav, setOpenNav }) => {
                         <Link to={"/products"} onClick={()=>setOpenNav(false)} className="cursor-pointer"><li>Products</li></Link>
                         <Link to={"/about"} onClick={()=>setOpenNav(false)} className="cursor-pointer"><li>About</li></Link>
                         <Link to={"/contact"} onClick={()=>setOpenNav(false)} className="cursor-pointer"><li>Contact</li></Link>
+                        {user && (
+                            <Link to={"/orders"} onClick={()=>setOpenNav(false)} className="cursor-pointer flex items-center gap-2">
+                                <Package size={24} />
+                                <li>My Orders</li>
+                            </Link>
+                        )}
                     </ul>
                 </nav>
             </div>
